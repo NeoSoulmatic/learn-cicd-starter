@@ -105,3 +105,5 @@ func main() {
 	log.Printf("Serving on port: %s\n", port)
 	log.Fatal(srv.ListenAndServe())
 }
+
+// handlerReadiness is a simple handler to check if the server is running
