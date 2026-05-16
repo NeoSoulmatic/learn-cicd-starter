@@ -1,5 +1,7 @@
 package main
 
+// CI test trigger
+
 import (
 	"database/sql"
 	"embed"
