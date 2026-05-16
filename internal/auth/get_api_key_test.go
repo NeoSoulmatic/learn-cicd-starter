@@ -7,10 +7,10 @@ import (
 
 func TestGetAPIKey(t *testing.T) {
 	tests := map[string]struct {
-		headers     http.Header
-		wantAPIKey  string
-		wantErr     error
-		wantErrMsg  string
+		headers    http.Header
+		wantAPIKey string
+		wantErr    error
+		wantErrMsg string
 	}{
 		"valid api key": {
 			headers: http.Header{
