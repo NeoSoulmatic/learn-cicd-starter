@@ -20,6 +20,10 @@ jobs:
       
       - name: Run tests
         run: go test -cover ./...
+      
+      - name: Run gosec
+        run: gosec ./...
+        
       - name: SUCCESS
         run: (exit 0)
 
@@ -48,8 +52,7 @@ jobs:
       - name: Run staticcheck
         run: staticcheck ./...
 
-      - name: Run gosec
-        run: gosec ./...
+      
       
       - name: SUCCESS
         run: (exit 0)
