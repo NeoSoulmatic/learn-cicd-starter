@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/go-chi/chi"
@@ -35,6 +36,12 @@ func main() {
 	if port == "" {
 		log.Fatal("PORT environment variable is not set")
 	}
+	// Validate port is a valid number to prevent log injection
+	portNum, err := strconv.Atoi(port)
+	if err != nil {
+		log.Fatalf("Invalid PORT value: must be a number")
+	}
+	port = strconv.Itoa(portNum)
 
 	apiCfg := apiConfig{}
 
