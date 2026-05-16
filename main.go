@@ -107,3 +107,6 @@ func main() {
 }
 
 // handlerReadiness is a simple handler to check if the server is running
+func empty() {
+
+}
