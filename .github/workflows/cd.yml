@@ -27,6 +27,14 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 1.26.0
+
+      - name: Build
+        run: ./scripts/buildprod.sh
+
       - id: 'auth'
         uses: 'google-github-actions/auth@v2'
         with:
